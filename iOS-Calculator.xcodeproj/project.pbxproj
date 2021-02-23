@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E38F3CC25E59A910074EE1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38F3CA25E59A910074EE1D /* HomeViewController.swift */; };
+		1E38F3CD25E59A910074EE1D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E38F3CB25E59A910074EE1D /* HomeViewController.xib */; };
 		1E3B622825DAE97900392BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3B622725DAE97900392BCA /* AppDelegate.swift */; };
 		1E3B623125DAE97900392BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E3B623025DAE97900392BCA /* Assets.xcassets */; };
 		1E3B623425DAE97900392BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E3B623225DAE97900392BCA /* LaunchScreen.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E38F3CA25E59A910074EE1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1E38F3CB25E59A910074EE1D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		1E3B622425DAE97900392BCA /* iOS-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3B622725DAE97900392BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E3B623025DAE97900392BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		1E38F3C125E598220074EE1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1E38F3C825E59A440074EE1D /* Home */,
 				1E38F3C425E598D30074EE1D /* Launch */,
 			);
 			path = View;
@@ -88,6 +93,7 @@
 		1E38F3C225E598290074EE1D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1E38F3C925E59A510074EE1D /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +111,22 @@
 				1E3B623225DAE97900392BCA /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		1E38F3C825E59A440074EE1D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1E38F3CB25E59A910074EE1D /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1E38F3C925E59A510074EE1D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1E38F3CA25E59A910074EE1D /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		1E3B621B25DAE97900392BCA = {
@@ -272,6 +294,7 @@
 			files = (
 				1E3B623425DAE97900392BCA /* LaunchScreen.storyboard in Resources */,
 				1E3B623125DAE97900392BCA /* Assets.xcassets in Resources */,
+				1E38F3CD25E59A910074EE1D /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E3B622825DAE97900392BCA /* AppDelegate.swift in Sources */,
+				1E38F3CC25E59A910074EE1D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
