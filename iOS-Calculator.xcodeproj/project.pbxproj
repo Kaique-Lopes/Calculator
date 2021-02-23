@@ -70,10 +70,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E38F3BF25E598110074EE1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1E38F3C125E598220074EE1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E38F3C425E598D30074EE1D /* Launch */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E38F3C225E598290074EE1D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1E38F3C325E598460074EE1D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		1E38F3C425E598D30074EE1D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				1E3B623225DAE97900392BCA /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		1E3B621B25DAE97900392BCA = {
 			isa = PBXGroup;
 			children = (
 				1E3B622625DAE97900392BCA /* iOS-Calculator */,
+				1E3B623025DAE97900392BCA /* Assets.xcassets */,
 				1E3B623D25DAE97A00392BCA /* iOS-CalculatorTests */,
 				1E3B624825DAE97A00392BCA /* iOS-CalculatorUITests */,
 				1E3B622525DAE97900392BCA /* Products */,
@@ -94,8 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				1E3B622725DAE97900392BCA /* AppDelegate.swift */,
-				1E3B623025DAE97900392BCA /* Assets.xcassets */,
-				1E3B623225DAE97900392BCA /* LaunchScreen.storyboard */,
+				1E38F3BF25E598110074EE1D /* Model */,
+				1E38F3C125E598220074EE1D /* View */,
+				1E38F3C225E598290074EE1D /* Controller */,
+				1E38F3C325E598460074EE1D /* Util */,
 				1E3B626C25DAEA1700392BCA /* Supporting Files */,
 			);
 			path = "iOS-Calculator";
