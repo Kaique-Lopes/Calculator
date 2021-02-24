@@ -10,6 +10,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="iOS_Calculator" customModuleProvider="target">
             <connections>
+                <outlet property="number0" destination="c14-VI-ruf" id="f4l-bz-fNw"/>
+                <outlet property="number1" destination="BXu-w8-cGV" id="4QN-VS-mxU"/>
+                <outlet property="number2" destination="VT3-uc-Zu5" id="VxZ-Ld-qnf"/>
+                <outlet property="number3" destination="fCo-MT-81g" id="uPE-ed-srh"/>
+                <outlet property="number4" destination="fp8-8p-8zj" id="dFf-Ly-894"/>
+                <outlet property="number5" destination="5cc-oj-ff7" id="zaK-jC-kpG"/>
+                <outlet property="number6" destination="KtA-Qe-QTn" id="1hd-am-vIr"/>
+                <outlet property="number7" destination="Ir4-XQ-qRS" id="92f-v9-eht"/>
+                <outlet property="number8" destination="5c3-eU-2yF" id="kl6-V8-smE"/>
+                <outlet property="number9" destination="VvU-JG-5YO" id="CXU-e4-I45"/>
+                <outlet property="numberDecimal" destination="Dak-zI-8BT" id="2qW-8y-osZ"/>
+                <outlet property="operatorAC" destination="cHe-tU-rak" id="juv-9H-Y9o"/>
+                <outlet property="operatorAddition" destination="6pn-H3-bSJ" id="Dbz-l8-GkR"/>
+                <outlet property="operatorDivision" destination="OJa-LS-UyR" id="gcx-mX-VCP"/>
+                <outlet property="operatorMultiplication" destination="Igx-V9-cU3" id="Jbj-Yb-rFf"/>
+                <outlet property="operatorPercent" destination="7b3-eP-LzY" id="6qp-rB-Agg"/>
+                <outlet property="operatorPlus" destination="Eip-RJ-C9S" id="al6-gX-Cph"/>
+                <outlet property="operatorResult" destination="LLJ-T6-1eh" id="e4X-Je-TGi"/>
+                <outlet property="operatorSubstraction" destination="2bB-dp-lkl" id="rDs-Q1-mXA"/>
+                <outlet property="resultLabel" destination="Qus-KP-NYi" id="pIo-IW-rtn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,7 +84,7 @@
                                         <constraint firstAttribute="width" secondItem="OJa-LS-UyR" secondAttribute="height" multiplier="1:1" id="lXz-va-1n6"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                    <state key="normal" title="/">
+                                    <state key="normal" title="÷">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
@@ -118,7 +138,7 @@
                                         <constraint firstAttribute="width" secondItem="Igx-V9-cU3" secondAttribute="height" multiplier="1:1" id="nqX-d8-Ikn"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                    <state key="normal" title="X">
+                                    <state key="normal" title="×">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
