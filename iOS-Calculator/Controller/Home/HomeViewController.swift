@@ -10,10 +10,10 @@ import UIKit
 final class HomeViewController: UIViewController {
         // MARK: - Outlets
     
-    // Result
+        // Result
     @IBOutlet weak var resultLabel: UILabel!
     
-    // Numbers
+        // Numbers
     @IBOutlet weak var number0: UIButton!
     @IBOutlet weak var number1: UIButton!
     @IBOutlet weak var number2: UIButton!
@@ -26,7 +26,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var number9: UIButton!
     @IBOutlet weak var numberDecimal: UIButton!
     
-    // Operators
+        // Operators
     @IBOutlet weak var operatorAC: UIButton!
     @IBOutlet weak var operatorPlus: UIButton!
     @IBOutlet weak var operatorPercent: UIButton!
@@ -36,6 +36,24 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var operatorMultiplication: UIButton!
     @IBOutlet weak var operatorDivision: UIButton!
     
+        // MARK: - Variables
+    
+    private var total: Double = 0
+    private var temp: Double = 0
+    private var operating: Bool = false
+    private var decimal: Bool = false
+    private var operation: OperatingType = .none
+    
+        // MARK: - Constants
+    private enum OperatingType {
+        case none
+        case addiction
+        case subtraction
+        case division
+        case multiplication
+        case percent
+    }
+    
         // MARK: - Initialization
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -44,52 +62,71 @@ final class HomeViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    // MARK: - Life Cycle
+    
+        // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    // MARK: - Buttons Actions
-    
-    @IBAction func operatorACAction(_ sender: Any) {
         
-    }
-    
-    @IBAction func operatorPlusMinAction(_ sender: Any) {
+        // MARK: - UI
+        number0.round()
+        number1.round()
+        number2.round()
+        number3.round()
+        number4.round()
+        number5.round()
+        number6.round()
+        number7.round()
+        number8.round()
+        number9.round()
+        numberDecimal.round()
         
-    }
-    @IBAction func operatorPercentAction(_ sender: Any) {
-        
-    }
-    
-    @IBAction func operatorDivisionAction(_ sender: Any) {
-        
-    }
-    
-    @IBAction func operatorMultiplierAction(_ sender: Any) {
-        
-    }
-    
-    @IBAction func operatorSubtractionAction(_ sender: Any) {
-        
+        operatorAC.round()
+        operatorPlus.round()
+        operatorPercent.round()
+        operatorResult.round()
+        operatorAddition.round()
+        operatorSubstraction.round()
+        operatorMultiplication.round()
+        operatorDivision.round()
     }
     
-    @IBAction func operatorAdditionAction(_ sender: Any) {
-        
+        // MARK: - Buttons Actions
+    
+    @IBAction func operatorACAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func operatorResultAction(_ sender: Any) {
-        
+    @IBAction func operatorPlusMinAction(_ sender: UIButton) {
+        sender.shine()
     }
-    @IBAction func numberDecimalAction(_ sender: Any) {
-        
+    @IBAction func operatorPercentAction(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func operatorDivisionAction(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func operatorMultiplierAction(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func operatorSubtractionAction(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func operatorAdditionAction(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func operatorResultAction(_ sender: UIButton) {
+        sender.shine()
+    }
+    @IBAction func numberDecimalAction(_ sender: UIButton) {
+        sender.shine()
     }
     @IBAction func numberAction(_ sender: UIButton) {
+        sender.shine()
         print(sender.tag)
     }
-    
-    
-    
-    
-
 }
