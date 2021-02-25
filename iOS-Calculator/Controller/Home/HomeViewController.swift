@@ -49,5 +49,47 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    // MARK: - Buttons Actions
+    
+    @IBAction func operatorACAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func operatorPlusMinAction(_ sender: Any) {
+        
+    }
+    @IBAction func operatorPercentAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func operatorDivisionAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func operatorMultiplierAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func operatorSubtractionAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func operatorAdditionAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func operatorResultAction(_ sender: Any) {
+        
+    }
+    @IBAction func numberDecimalAction(_ sender: Any) {
+        
+    }
+    @IBAction func numberAction(_ sender: UIButton) {
+        print(sender.tag)
+    }
+    
+    
+    
+    
 
 }
