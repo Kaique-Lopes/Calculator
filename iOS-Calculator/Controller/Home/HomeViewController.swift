@@ -37,7 +37,6 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var operatorDivision: UIButton!
     
         // MARK: - Variables
-    
     private var total: Double = 0
     private var temp: Double = 0
     private var operating: Bool = false
@@ -122,39 +121,68 @@ final class HomeViewController: UIViewController {
     }
     
         // MARK: - Buttons Actions
-    
     @IBAction func operatorACAction(_ sender: UIButton) {
+        clear()
         sender.shine()
     }
     
     @IBAction func operatorPlusMinAction(_ sender: UIButton) {
+        temp = temp * (-1)
+        resultLabel.text = printFormatter.string(from: NSNumber(value: temp))
         sender.shine()
     }
+    
     @IBAction func operatorPercentAction(_ sender: UIButton) {
+        if operation != .percent {
+            result()
+        }
+        operating = true
+        operation = .percent
+        result()
         sender.shine()
     }
     
     @IBAction func operatorDivisionAction(_ sender: UIButton) {
+        result()
+        operating = true
+        operation = .division
         sender.shine()
     }
     
     @IBAction func operatorMultiplierAction(_ sender: UIButton) {
+        result()
+        operating = true
+        operation = .multiplication
         sender.shine()
     }
     
     @IBAction func operatorSubtractionAction(_ sender: UIButton) {
+        result()
+        operating = true
+        operation = .subtraction
         sender.shine()
     }
     
     @IBAction func operatorAdditionAction(_ sender: UIButton) {
+        result()
+        operating = true
+        operation = .addiction
         sender.shine()
     }
     
     @IBAction func operatorResultAction(_ sender: UIButton) {
+        result()
         sender.shine()
     }
     
     @IBAction func numberDecimalAction(_ sender: UIButton) {
+        let currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
+        if operating && currentTemp.count >= kMaxLength {
+            return
+        }
+        resultLabel.text = resultLabel.text! + kDecimalSeparator
+        decimal = true
+        
         sender.shine()
     }
     
