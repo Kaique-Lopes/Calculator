@@ -114,6 +114,8 @@ final class HomeViewController: UIViewController {
         operatorSubstraction.round()
         operatorMultiplication.round()
         operatorDivision.round()
+        
+        numberDecimal.setTitle(kDecimalSeparator, for: .normal)
     }
     
         // MARK: - Buttons Actions
