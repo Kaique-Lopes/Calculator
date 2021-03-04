@@ -47,8 +47,9 @@ final class HomeViewController: UIViewController {
         // MARK: - Constants
     private let kDecimalSeparator = Locale.current.decimalSeparator!
     private let kMaxLength = 9
-    private let kMaxValue = 999999999
-    private let kMinValue = 0.00000001
+    private let kMaxValue: Double = 999999999
+    private let kMinValue: Double = 0.00000001
+    
     private enum OperatingType {
         case none
         case addiction
@@ -116,6 +117,8 @@ final class HomeViewController: UIViewController {
         operatorDivision.round()
         
         numberDecimal.setTitle(kDecimalSeparator, for: .normal)
+        
+        result()
     }
     
         // MARK: - Buttons Actions
@@ -150,11 +153,58 @@ final class HomeViewController: UIViewController {
     @IBAction func operatorResultAction(_ sender: UIButton) {
         sender.shine()
     }
+    
     @IBAction func numberDecimalAction(_ sender: UIButton) {
         sender.shine()
     }
+    
     @IBAction func numberAction(_ sender: UIButton) {
         sender.shine()
         print(sender.tag)
+    }
+    
+    private func clear() {
+        operation = .none
+        operatorAC.setTitle("AC", for: .normal)
+        if temp != 0 {
+            temp = 0
+            resultLabel.text = "0"
+        } else {
+            total = 0
+        }
+    }
+    
+    private func result() {
+        switch operation {
+            
+        case .none:
+            break
+            
+        case .addiction:
+            total = total + temp
+            break
+            
+        case .subtraction:
+            total = total - temp
+            break
+            
+        case .division:
+            total = total / temp
+            break
+            
+        case .multiplication:
+            total = total * temp
+            break
+            
+        case .percent:
+            total = total / 100
+            total = temp
+            break
+        }
+        
+        if total <= kMaxValue || total > kMinValue {
+            resultLabel.text = printFormatter.string(from: NSNumber(value: total))
+        }
+        print("TOTAL \(total)")
     }
 }
