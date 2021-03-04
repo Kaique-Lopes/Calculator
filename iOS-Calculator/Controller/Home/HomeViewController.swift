@@ -45,6 +45,10 @@ final class HomeViewController: UIViewController {
     private var operation: OperatingType = .none
     
         // MARK: - Constants
+    private let kDecimalSeparator = Locale.current.decimalSeparator!
+    private let kMaxLength = 9
+    private let kMaxValue = 999999999
+    private let kMinValue = 0.00000001
     private enum OperatingType {
         case none
         case addiction
@@ -53,6 +57,28 @@ final class HomeViewController: UIViewController {
         case multiplication
         case percent
     }
+    
+        // MARK: - Formaters
+    private let auxFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        let locale = Locale.current
+        formatter.groupingSeparator = ""
+        formatter.decimalSeparator = locale.decimalSeparator
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
+    
+    private let printFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        let locale = Locale.current
+        formatter.groupingSeparator = locale.groupingSeparator
+        formatter.decimalSeparator = locale.decimalSeparator
+        formatter.numberStyle = .decimal
+        formatter.maximumIntegerDigits = 9
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 8
+        return formatter
+    }()
     
         // MARK: - Initialization
     init() {
