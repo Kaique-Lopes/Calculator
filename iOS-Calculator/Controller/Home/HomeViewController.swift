@@ -80,6 +80,14 @@ final class HomeViewController: UIViewController {
         return formatter
     }()
     
+    private let printScientficFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .scientific
+        formatter.maximumFractionDigits = 3
+        formatter.exponentSymbol = "e"
+        return formatter
+    }()
+    
         // MARK: - Initialization
     init() {
         super.init(nibName: nil, bundle: nil)
