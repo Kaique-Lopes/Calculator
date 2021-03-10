@@ -44,5 +44,7 @@ extension UIButton {
             })
         }
     }
-    
+    func selectOperation(_ selected: Bool) {
+        
+    }
 }

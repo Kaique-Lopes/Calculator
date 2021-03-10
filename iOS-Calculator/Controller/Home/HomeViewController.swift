@@ -281,17 +281,15 @@ final class HomeViewController: UIViewController {
             switch operation {
             
             case .none, .percent:
-                
+                break
             case .addiction:
-                
+                break
             case .subtraction:
-                
+                break
             case .division:
-                
+                break
             case .multiplication:
-                
-            case :
-                
+                break
             }
         }
     }
