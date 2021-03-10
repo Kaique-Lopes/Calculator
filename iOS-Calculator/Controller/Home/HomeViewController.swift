@@ -146,40 +146,50 @@ final class HomeViewController: UIViewController {
         }
         operating = true
         operation = .percent
-        result()
         sender.shine()
     }
     
     @IBAction func operatorDivisionAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .division
         sender.shine()
     }
     
     @IBAction func operatorMultiplierAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .multiplication
         sender.shine()
     }
     
     @IBAction func operatorSubtractionAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
+        
         operating = true
         operation = .subtraction
         sender.shine()
     }
     
     @IBAction func operatorAdditionAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .addiction
         sender.shine()
     }
     
     @IBAction func operatorResultAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         sender.shine()
     }
     
@@ -263,5 +273,26 @@ final class HomeViewController: UIViewController {
             resultLabel.text = printFormatter.string(from: NSNumber(value: total))
         }
         print("TOTAL \(total)")
+    }
+    private func selectVisualOperation() {
+        if !operating {
+            
+        } else {
+            switch operation {
+            
+            case .none, .percent:
+                
+            case .addiction:
+                
+            case .subtraction:
+                
+            case .division:
+                
+            case .multiplication:
+                
+            case :
+                
+            }
+        }
     }
 }
