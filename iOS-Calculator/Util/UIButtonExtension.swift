@@ -6,6 +6,8 @@
 //
 
 import UIKit
+private let orange = UIColor(red: 254/255, green: 148/255, blue: 0/255, alpha: 1)
+
 
 // MARK: - UIButton Extension
 extension UIButton {
@@ -45,6 +47,7 @@ extension UIButton {
         }
     }
     func selectOperation(_ selected: Bool) {
-        
+        backgroundColor = selected ? .white : orange
+        setTitleColor(selected ? orange : .white, for: .normal)
     }
 }

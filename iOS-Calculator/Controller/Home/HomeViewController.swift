@@ -155,6 +155,7 @@ final class HomeViewController: UIViewController {
         }
         operating = true
         operation = .division
+        sender.selectOperation(true)
         sender.shine()
     }
     
@@ -164,6 +165,7 @@ final class HomeViewController: UIViewController {
         }
         operating = true
         operation = .multiplication
+        sender.selectOperation(true)
         sender.shine()
     }
     
@@ -174,6 +176,7 @@ final class HomeViewController: UIViewController {
         
         operating = true
         operation = .subtraction
+        sender.selectOperation(true)
         sender.shine()
     }
     
@@ -183,6 +186,7 @@ final class HomeViewController: UIViewController {
         }
         operating = true
         operation = .addiction
+        sender.selectOperation(true)
         sender.shine()
     }
     
@@ -201,6 +205,7 @@ final class HomeViewController: UIViewController {
         resultLabel.text = resultLabel.text! + kDecimalSeparator
         decimal = true
         
+        selectVisualOperation()
         sender.shine()
     }
     
@@ -226,7 +231,7 @@ final class HomeViewController: UIViewController {
         let number = sender.tag
         temp = Double(currentTemp + String(number))!
         resultLabel.text = printFormatter.string(from: NSNumber(value: temp))
-        print(sender.tag)
+        selectVisualOperation()
         sender.shine()
     }
     
@@ -276,19 +281,41 @@ final class HomeViewController: UIViewController {
     }
     private func selectVisualOperation() {
         if !operating {
-            
+                operatorAddition.selectOperation(false)
+                operatorSubstraction.selectOperation(false)
+                operatorMultiplication.selectOperation(false)
+                operatorDivision.selectOperation(false)
         } else {
             switch operation {
-            
             case .none, .percent:
+                operatorAddition.selectOperation(false)
+                operatorSubstraction.selectOperation(false)
+                operatorMultiplication.selectOperation(false)
+                operatorDivision.selectOperation(false)
                 break
             case .addiction:
+                operatorAddition.selectOperation(true)
+                operatorSubstraction.selectOperation(false)
+                operatorMultiplication.selectOperation(false)
+                operatorDivision.selectOperation(false)
                 break
             case .subtraction:
+                operatorAddition.selectOperation(false)
+                operatorSubstraction.selectOperation(true)
+                operatorMultiplication.selectOperation(false)
+                operatorDivision.selectOperation(false)
                 break
             case .division:
+                operatorAddition.selectOperation(false)
+                operatorSubstraction.selectOperation(false)
+                operatorMultiplication.selectOperation(false)
+                operatorDivision.selectOperation(true)
                 break
             case .multiplication:
+                operatorAddition.selectOperation(false)
+                operatorSubstraction.selectOperation(false)
+                operatorMultiplication.selectOperation(true)
+                operatorDivision.selectOperation(false)
                 break
             }
         }
