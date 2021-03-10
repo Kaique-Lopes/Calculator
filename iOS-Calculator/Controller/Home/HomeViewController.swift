@@ -48,7 +48,7 @@ final class HomeViewController: UIViewController {
     private let kMaxLength = 9
     private let kMaxValue: Double = 999999999
     private let kMinValue: Double = 0.00000001
-    
+    private let kTotal = "total"
     private enum OperatingType {
         case none
         case addiction
@@ -124,7 +124,7 @@ final class HomeViewController: UIViewController {
         operatorDivision.round()
         
         numberDecimal.setTitle(kDecimalSeparator, for: .normal)
-        
+        total = UserDefaults.standard.double(forKey: kTotal)
         result()
     }
     
@@ -277,6 +277,8 @@ final class HomeViewController: UIViewController {
         if total <= kMaxValue || total > kMinValue {
             resultLabel.text = printFormatter.string(from: NSNumber(value: total))
         }
+        
+        UserDefaults.standard.set(total, forKey: kTotal)
         print("TOTAL \(total)")
     }
     private func selectVisualOperation() {
