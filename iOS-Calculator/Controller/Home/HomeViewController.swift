@@ -100,7 +100,12 @@ final class HomeViewController: UIViewController {
         // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        numberDecimal.setTitle(kDecimalSeparator, for: .normal)
+        total = UserDefaults.standard.double(forKey: kTotal)
+        result()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         // MARK: - UI
         number0.round()
         number1.round()
@@ -122,10 +127,6 @@ final class HomeViewController: UIViewController {
         operatorSubstraction.round()
         operatorMultiplication.round()
         operatorDivision.round()
-        
-        numberDecimal.setTitle(kDecimalSeparator, for: .normal)
-        total = UserDefaults.standard.double(forKey: kTotal)
-        result()
     }
     
         // MARK: - Buttons Actions
